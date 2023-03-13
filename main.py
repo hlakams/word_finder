@@ -10,7 +10,12 @@ print('This program finds the start positions of the words provided in `main.py`
 # input string
 input_string = input('Enter your input string: ')
 
+# get result
+result = finder(input_string, to_find)
+
 # find instances + print to console
 print('\nStarting locations of given input strings:')
-for idx in finder(input_string, to_find):
-    print(idx)
+for idx, result in enumerate(result):
+    print(f'Results for {to_find[idx]}:')
+    for value in result:
+        print(value)
