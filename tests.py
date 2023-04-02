@@ -15,4 +15,4 @@ def test_finder_1() -> None:
 # (FAIL)
 def test_finder_2() -> None:
     output = finder.finder('mousecat mice catmice mouse mousemouse', ['mice'], [False])
-    assert output == [[9, 18]]
+    assert output == [[9, 17]]
