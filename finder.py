@@ -3,10 +3,10 @@ def finder(input_string: str, to_find: list[str], to_verify: list[bool]) -> list
     # all found positions, grouped by word
     instances = []
     input_string = input_string.lower()
-    
+
     # iterate over all words to find
     for idx, current_string in enumerate(to_find):
-        # account for all foung instances for current word 
+        # account for all foung instances for current word
         current_string = current_string.lower()
         current_instances = []
         current_idx = 0
@@ -17,14 +17,14 @@ def finder(input_string: str, to_find: list[str], to_verify: list[bool]) -> list
             if current_idx + len(current_string) - 1 < len(input_string):
                 # word is found
                 if input_string[current_idx:current_idx+len(current_string)] == current_string:
-                    # if word can be substring, add found index 
-                    if to_verify[idx] == False:
+                    # if word can be substring, add found index
+                    if to_verify[idx] is False:
                         current_instances.append(current_idx)
                     # if word cannot be substring, verify independence + add found index
                     else:
                         if verify_word(input_string, current_string, current_idx):
                             current_instances.append(current_idx)
-                
+
                 # go to next position
                 current_idx += 1
             # invalid word
@@ -36,6 +36,7 @@ def finder(input_string: str, to_find: list[str], to_verify: list[bool]) -> list
 
     # done!
     return instances
+
 
 # check if word is separated
 def verify_word(input_string: str, current_string: str, current_idx: int) -> bool:
@@ -60,6 +61,6 @@ def verify_word(input_string: str, current_string: str, current_idx: int) -> boo
             # end of input string
             else:
                 return True
-    
+
     # invalid condition, some boudary condition failed
     return False

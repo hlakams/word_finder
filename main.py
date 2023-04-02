@@ -22,7 +22,7 @@ if custom_find.lower().strip() not in find_verify:
         # new string
         new_find = input('\nEnter a custom string to find: ')
         to_find.append(new_find)
-        
+
         # singular find condition
         new_verify = input('Do you want to find singular instances only (substrings by default) [Y/n]? ')
         if new_verify in find_verify:
