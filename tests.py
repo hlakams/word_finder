@@ -11,7 +11,7 @@ to_verify = [True, False]
 # (PASS)
 def test_finder_1() -> None:
     # we expect to find 'mouse' as a proper substring that starts at index 22
-    output = finder.finder('mousecat mice catmice mouse mousemouse', to_find[0], to_find[1])
+    output = finder.finder('mousecat mice catmice mouse mousemouse', [to_find[0]], [to_find[1]])
     assert output == [[22]]
 
 
@@ -19,5 +19,5 @@ def test_finder_1() -> None:
 # (FAIL)
 def test_finder_2() -> None:
     # we expect to find 'mice' as a constituent substring, two of which start at indices 9 and 17
-    output = finder.finder('mousecat mice catmice mouse mousemouse', to_find[1], to_verify[1])
+    output = finder.finder('mousecat mice catmice mouse mousemouse', [to_find[1]], [to_verify[1]])
     assert output == [[9, 17]]
