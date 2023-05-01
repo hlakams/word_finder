@@ -1,5 +1,5 @@
 # word_finder
-[![DOI](https://zenodo.org/badge/613132267.svg)](https://zenodo.org/badge/latestdoi/613132267)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7882394.svg)](https://doi.org/10.5281/zenodo.7882394)
 ---
 
 #### Description
