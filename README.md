@@ -1,4 +1,6 @@
 # word_finder
+[![DOI](https://zenodo.org/badge/613132267.svg)](https://zenodo.org/badge/latestdoi/613132267)
+---
 
 #### Description
 This is a proof-of-concept substring finder which, by default, finds occurrences of the words 'mouse' and 'mice' within a user-defined input string. Aside from this input, the user can also specify the usage of custom strings and find conditions (as a substring or singular word) within the console interface.
